@@ -70,13 +70,14 @@ const commonNumbers = (arr1, arr2) => {
 
 const multiplyTable = range => {
 
-    const cell = String(range * range).length + 1;  // calculate max number width
-
     for (let i = 0; i <= range; i++) {
 
         let row = '';
 
         for (let j = 0; j <= range; j++) {
+
+            const cell = String(j * range).length + 1;  // calculate max number width
+
             if (!i && !j)
                 row += (' ').repeat(cell)
             else {
@@ -144,4 +145,4 @@ multiplyTable(10);
 console.log('')
 
 multiplyTable(15);
-console.log('')
+
